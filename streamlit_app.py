@@ -1,3 +1,3 @@
-import streamlit
+import streamlit as st
 
-streamlit.title('Welcome to my data application')
+st.title('Welcome to my data application')
