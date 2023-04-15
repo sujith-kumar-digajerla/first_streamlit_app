@@ -43,3 +43,6 @@ streamlit.text(my_data_row)
 
 
 add_fruit = streamlit.text_input("add your fruits:")
+
+streamlit.write('Thanks for adding',add_fruit)
+my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from streamlit');")
