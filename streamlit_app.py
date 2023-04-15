@@ -40,3 +40,6 @@ my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
 my_data_row = my_cur.fetchall()
 streamlit.header("fruit list contains")
 streamlit.text(my_data_row)
+
+
+add_fruit = streamlit.text_input("add your fruits:")
