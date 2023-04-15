@@ -26,3 +26,5 @@ response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(response.json())
 
 normalised_tbl = pandas.json_normalize(response.json())
+
+streamlit.dataframe(normalised_tbl)
