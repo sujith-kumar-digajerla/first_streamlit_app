@@ -22,7 +22,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 streamlit.dataframe(fruits_to_show)
 
-def get_fruit_data(fruit_choice):
+def get_fruit_data(this_fruit_choice):
   streamlit.write('The user entered ', fruit_choice)
   response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
   normalised_tbl = pandas.json_normalize(response.json())
@@ -34,7 +34,7 @@ try:
   if not fruit_choice:
     streamlit.error("select a fruit")
   else:
-    get_fruit_data()
+    get_fruit_data(fruit_choice)
     
 except URLError as e:
   streamlit.error()
